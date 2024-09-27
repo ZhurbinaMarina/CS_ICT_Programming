@@ -18,20 +18,23 @@ def is_prime(n: int) -> bool:
         if n % i == 0:
             return False
         return True
-#
-#
-# def gcd(a: int, b: int) -> int:
-#     """
-#     Euclid's algorithm for determining the greatest common divisor.
-#     >>> gcd(12, 15)
-#     3
-#     >>> gcd(3, 7)
-#     1
-#     """
-#     # PUT YOUR CODE HERE
-#     pass
-#
-#
+
+
+def gcd(a: int, b: int) -> int:
+    """
+    Euclid's algorithm for determining the greatest common divisor.
+    >>> gcd(12, 15)
+    3
+    >>> gcd(3, 7)
+    1
+    """
+    if a == 0 or b == 0:
+        return max(a, b)
+    if a > b:
+        return gcd(a - b, b)
+    return gcd(a, b - a)
+
+
 # def multiplicative_inverse(e: int, phi: int) -> int:
 #     """
 #     Euclid's extended algorithm for finding the multiplicative
@@ -70,8 +73,8 @@ def is_prime(n: int) -> bool:
 #     # Return public and private keypair
 #     # Public key is (e, n) and private key is (d, n)
 #     return ((e, n), (d, n))
-#
-#
+
+
 # def encrypt(pk: tp.Tuple[int, int], plaintext: str) -> tp.List[int]:
 #     # Unpack the key into it's components
 #     key, n = pk
