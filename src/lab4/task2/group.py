@@ -9,8 +9,8 @@ class Group:
 
     def __str__(self) -> str:
         if self.max_age == 123:
-            return f'{self.min_age}+: {', '.join(str(respondent) for respondent in sorted(self.respondents))}'
-        return f'{self.min_age}-{self.max_age}: {', '.join(str(respondent) for respondent in sorted(self.respondents))}'
+            return f'{self.min_age}+: {", ".join(str(respondent) for respondent in sorted(self.respondents))}'
+        return f'{self.min_age}-{self.max_age}: {", ".join(str(respondent) for respondent in sorted(self.respondents))}'
 
     def add_respondent(self, new_respondent: Respondent):
         if self.min_age <= new_respondent.age <= self.max_age:
