@@ -2,8 +2,8 @@ import unittest
 from src.lab4.task1.main import main
 from src.lab4.task1.user import User
 
-USERS_FILE_PATH = "..\\..\\src/lab4/task1/txtf/users.txt"
-MOVIES_FILE_PATH = "..\\..\\src/lab4/task1/txtf/movies.txt"
+USERS_FILE_PATH = "txtf/users.txt"
+MOVIES_FILE_PATH = "txtf/movies.txt"
 
 class RecommenderTestCase(unittest.TestCase):
 
